@@ -1,4 +1,4 @@
-package paqAnimales;
+package es.cifpcarlosiii.ed1damdist.tarea4;
 
 public class Principal {
 
@@ -16,25 +16,22 @@ Esquema de clases de reino-animal
 */
 
 
-        Animal ani = new Animal();
+        Animal animal = new Animal("Animal generico");
+        Mamifero mamifero = new Mamifero("Mamifero generico");
+        Perro toby = new Perro("Toby");
+        Gato isidoro = new Gato("Isidoro");
+        isidoro.setPelos(4);
 
-        Mamifero mami = new Mamifero();
-
-        Perro toby = new Perro();
-
-        Gato isidoro = new Gato();
-        isidoro.pelos = 4;
-
-        ani = isidoro;
+        animal = isidoro;
 
         Gato g;
-        g = (Gato) ani;
-        System.out.println("pelos de gato: " + g.pelos);
+        g = (Gato) animal;
+        System.out.println("pelos de gato: " + g.getPelos());
 
         Animal array[] = new Animal[4];
 
-        array[0] = ani;
-        array[1] = mami;
+        array[0] = animal;
+        array[1] = mamifero;
         array[2] = toby;
         array[3] = isidoro;
 
